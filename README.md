@@ -61,13 +61,13 @@ Directory for defining routes. I don't think this need more explanation.
 
 |Dependency         | Usage |
 |-------------------|------ |
-|[body-parser]('https://npm.com/package/body-parser')               |Parses the body of the incoming request and add it to req.body field|
-|[compression]('https://npmjs.com/package/compression')             |Compresses the response|
-|[express]('https://npmjs.com/package/express')                     |Express|
-|[express-sanitizer]('https://npmjs.com/package/express-sanitizer') |Prevent XSS and sanitize the incoming request|
-|[morgan]('https://npmjs.com/package/morgan')                       |HTTP request logger|
-|[winston]('https://npmjs.com/package/winston')                     |General purpose logger for the application|
-|[nyc]('https://npmjs.com/package/nyc')                             |Code Coverage tool|
-|[standard]('https://npmjs.com/package/standard')                   |Linting and styling tool.|
-|[chai]('https://npmjs.com/package/chai')                           |Assertion Library|     
-|[chai-http]('https://npmjs.com/package/chai-http')                 |Middleware for chai to test http endpoints|
+|[body-parser](https://npm.com/package/body-parser)               |Parses the body of the incoming request and add it to req.body field|
+|[compression](https://npmjs.com/package/compression)             |Compresses the response|
+|[express](https://npmjs.com/package/express)                     |Express|
+|[express-sanitizer](https://npmjs.com/package/express-sanitizer) |Prevent XSS and sanitize the incoming request|
+|[morgan](https://npmjs.com/package/morgan)                       |HTTP request logger|
+|[winston](https://npmjs.com/package/winston)                     |General purpose logger for the application|
+|[nyc](https://npmjs.com/package/nyc)                             |Code Coverage tool|
+|[standard](https://npmjs.com/package/standard)                   |Linting and styling tool.|
+|[chai](https://npmjs.com/package/chai)                           |Assertion Library|     
+|[chai-http](https://npmjs.com/package/chai-http)                 |Middleware for chai to test http endpoints|
