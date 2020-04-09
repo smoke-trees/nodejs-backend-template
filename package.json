@@ -1,26 +1,24 @@
 {
-  "name": "nodejs-backen-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "mocha tests/*",
+    "lint": "standard --fix",
+    "start": "node server.js",
+    "coverage": "nyc mocha tests/*"
   },
-  "author": "SmokeTrees",
-  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "bson": "^4.0.3",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-sanitizer": "^1.0.5",
-    "jsonwebtoken": "^8.5.1",
-    "mocha": "^7.1.1",
-    "mongodb": "^3.5.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.2",
-    "standard": "^14.3.3",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nyc": "^15.0.0",
+    "standard": "^14.3.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.3"
   }
 }
