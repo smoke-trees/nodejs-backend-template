@@ -1,73 +1,79 @@
 # Template by SmokeTrees
 
-This is a standard template we use at SmokeTrees to create our backend for node.js.
+Standard template used at SmokeTrees for REST APIs written in NodeJS.
 
-To start the server run
+## Running the server
+
 ```
 $ npm start
 ```
 
-Note: This will run a server for development environment. 
-For information on deploying express application to production server and learn best practices refer [this](https://expressjs.com/en/advanced/best-practice-performance.html).
+Note: This will run a server in the development environment.
+For information on deploying an express application to production and learn best practices, take a look [here](https://expressjs.com/en/advanced/best-practice-performance.html).
 
-### logger
+## Logging
 
 This directory has 2 files.
 
-* logger.js exports a winston object which we use for logging. You should edit logger.js to write your config for the logs.
-* morgan.js exports a pre-configured morgan object to log using stream to winston object. It is used to intercept the http request and log the request and response details.
-For more details visit the official page for [morgan](https://www.npmjs.com/package/morgan).
+- `logger.js` exports a winston object which we use for logging. You should modify logger.js to customize your logging configuration.
+- `morgan.js` exports a pre-configured morgan object to write logs using a stream to winston. It is used to intercept http requests and log the request and response details.
+  For more details visit the official page for [morgan](https://www.npmjs.com/package/morgan).
 
-## routes
+## Routes
 
-Directory for defining routes. I don't think this need more explanation.
+Directory for defining routes. I don't think this needs more explanation.
 
 ## Additional Information
 
-* If on linux running the following command add ./node_modules/.bin to the path.
+- On Linux, UNIX and Mac, running the following command adds ./node_modules/.bin to the path.
+
   ```bash
-  $ source ./activate
+  source ./activate
   ```
-  By doing so we can use the commands installed with packages using the terminal.
-  This won't be required in many IDEs like Webstorm but I thought it will be good idea to include it.
-  
-* [standard.js](https://npmjs.com/package/standard) has been added as the default linting and styling tool
-  
+
+  This makes it easier to run locally installed command packages.
+  This won't be required in many IDEs like Webstorm, but we thought it's a good idea to include it anyway.
+
+- [standard.js](https://npmjs.com/package/standard) has been added as the default linting and styling tool
+
   Use :
+
+  ```bash
+  npm run lint
   ```
-  $ npm run lint
-  ```
-  Fixes whatever can be fix. Above command logs out the errors which it couldn't fix.
-  
-* [mocha](https://npmjs.com/package/mocha) is used for testing and [chai](https://npmjs.com/package/chai) is used for assertion.
+
+  Formats the entire project, and logs out anything it couldn't fix.
+
+- [mocha](https://npmjs.com/package/mocha) is used for testing and [chai](https://npmjs.com/package/chai) is used for assertion.
   [chai-http](https://npmjs.com/package/chai) is used to test http endpoints.
-  
-  Use:
-  ```
-    $ npm test
-  ```
-  
-* [nyc](https://npmjs.com/package/nyc) is used as the default coverage tool.
-  Use:
-  ```
-   $ npm run coverage
-   ```
-  
 
-* The master contains code for a http server. Checkout the branch https for the http server.
-  Replace the self-signed certificates in teh certs with your own ssl certificates.
-  
-## Dependency information
+  Use:
 
-|Dependency         | Usage |
-|-------------------|------ |
-|[body-parser](https://npm.com/package/body-parser)               |Parses the body of the incoming request and add it to req.body field|
-|[compression](https://npmjs.com/package/compression)             |Compresses the response|
-|[express](https://npmjs.com/package/express)                     |Express|
-|[express-sanitizer](https://npmjs.com/package/express-sanitizer) |Prevent XSS and sanitize the incoming request|
-|[morgan](https://npmjs.com/package/morgan)                       |HTTP request logger|
-|[winston](https://npmjs.com/package/winston)                     |General purpose logger for the application|
-|[nyc](https://npmjs.com/package/nyc)                             |Code Coverage tool|
-|[standard](https://npmjs.com/package/standard)                   |Linting and styling tool.|
-|[chai](https://npmjs.com/package/chai)                           |Assertion Library|     
-|[chai-http](https://npmjs.com/package/chai-http)                 |Middleware for chai to test http endpoints|
+  ```bash
+  npm test
+  ```
+
+- [nyc](https://npmjs.com/package/nyc) is used as the default coverage tool.
+  Use:
+
+  ```bash
+  npm run coverage
+  ```
+
+* The master branch ships code for a **http** server. Checkout the **https** branch for the https server.
+  Replace the self-signed certificates in the certs with your own SSL certificates.
+
+## Dependencies
+
+| Dependency                                                       | Usage                                                                |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [body-parser](https://npm.com/package/body-parser)               | POST body parsing middleware. Adds body object to incoming request |
+| [compression](https://npmjs.com/package/compression)             | Response compression middleware                                              |
+| [express](https://npmjs.com/package/express)                     | Express REST API framework                                                             |
+| [express-sanitizer](https://npmjs.com/package/express-sanitizer) | Prevents XSS and sanitizes incoming requests                        |
+| [morgan](https://npmjs.com/package/morgan)                       | HTTP request logger                                                  |
+| [winston](https://npmjs.com/package/winston)                     | General purpose logger for the application                           |
+| [nyc](https://npmjs.com/package/nyc)                             | Code Coverage tool                                                   |
+| [standard](https://npmjs.com/package/standard)                   | Linting and styling tool.                                            |
+| [chai](https://npmjs.com/package/chai)                           | Assertion Library                                                    |
+| [chai-http](https://npmjs.com/package/chai-http)                 | Middleware for chai to test http endpoints                           |
