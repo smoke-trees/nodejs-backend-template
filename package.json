@@ -1,10 +1,10 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "mocha tests/*",
+    "test": "nyc --reporter=lcov mocha tests/*",
     "lint": "standard --fix",
     "start": "node server.js",
-    "coverage": "nyc mocha tests/*"
+    "coverage": "codecov"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -13,11 +13,12 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "nyc": "^15.0.0",
-    "standard": "^14.3.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "codecov": "^3.6.5",
     "mocha": "^7.1.1",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "nyc": "^15.0.0",
+    "standard": "^14.3.3"
   }
 }
