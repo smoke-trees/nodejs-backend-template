@@ -6,10 +6,8 @@
     "coverage": "nyc mocha tests/*"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "express-sanitizer": "^1.0.5",
     "morgan": "^1.10.0",
     "winston": "^3.2.1"
   },
