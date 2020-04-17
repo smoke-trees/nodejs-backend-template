@@ -69,10 +69,9 @@ Directory for defining routes. I don't think this needs more explanation.
 
 | Dependency                                                       | Usage                                                                |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [body-parser](https://npm.com/package/body-parser)               | POST body parsing middleware. Adds body object to incoming request |
-| [compression](https://npmjs.com/package/compression)             | Response compression middleware                                              |
-| [express](https://npmjs.com/package/express)                     | Express REST API framework                                                             |
-| [express-sanitizer](https://npmjs.com/package/express-sanitizer) | Prevents XSS and sanitizes incoming requests                        |
+| [cors](https://npm.com/package/cors)         			   | CORS middleware to set CORS policy                                   |
+| [compression](https://npmjs.com/package/compression)             | Response compression middleware                                      |
+| [express](https://npmjs.com/package/express)                     | Express REST API framework                                           |
 | [morgan](https://npmjs.com/package/morgan)                       | HTTP request logger                                                  |
 | [winston](https://npmjs.com/package/winston)                     | General purpose logger for the application                           |
 | [nyc](https://npmjs.com/package/nyc)                             | Code Coverage tool                                                   |
