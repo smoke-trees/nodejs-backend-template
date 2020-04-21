@@ -3,10 +3,12 @@ const app = express()
 
 const compression = require('compression')
 const morgan = require('./logging/morgan')
+const cors = require('cors')
 
 // Middlewares
 app.use(express.json())
 app.use(compression())
+app.use(cors())
 
 // Logging
 
